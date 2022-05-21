@@ -5,8 +5,9 @@ class Settings:
         with open("settings.json", "r") as f:
             jsondata = json.loads(f.read())
         
-        self.token = jsondata["token"]
-        self.pointer = jsondata["pointer"]
-        self.cmd = jsondata["cmd"]
-        self.prefix = jsondata["prefix"]
-        self.remove_pointer = jsondata["remove_pointer"]
+        self.token = str(jsondata["token"])
+        self.pointer = str(jsondata["pointer"])
+        self.cmd = str(jsondata["cmd"])
+        self.prefix = str(jsondata["prefix"])
+        self.remove_pointer = str(jsondata["remove_pointer"])
+        self.option_pointer = str(jsondata["option_pointer"])
